@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Set Backtracking Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Power Set Backtracking Visualizer</h1>
+    <p class="subtitle">Enter an array, then watch include/exclude choices build every subset.</p>
+
+    <section class="panel controls">
+      <div class="row">
+        <label for="array-size">Array size</label>
+        <input id="array-size" type="number" min="1" max="10" value="5" />
+        <button id="build-inputs" type="button">Create Inputs</button>
+      </div>
+
+      <div id="value-inputs" class="value-grid"></div>
+
+      <div class="row actions">
+        <button id="start" type="button">Start Visualization</button>
+        <button id="reset" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Array Memory Block</h2>
+      <div id="memory-block" class="memory-block"></div>
+      <p id="status" class="status">Status: waiting for input</p>
+      <p id="current-subset" class="current-subset">Current subset: []</p>
+    </section>
+
+    <section class="panel">
+      <h2>Generated Subsets</h2>
+      <ol id="subset-list" class="subset-list"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
